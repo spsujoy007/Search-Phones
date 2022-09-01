@@ -42,9 +42,9 @@ const showPhones = (phones, dataLimit) => {
         <div class="card shadow border-0 rounded-4">
         <img src="${phone.image}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h4 class="card-title">${phone.phone_name}</h4>
-            <h6>Brand: ${phone.brand}</h6>
-            <p>Slug: ${phone.slug.slice(0, 26)}</p>
+        <h4 class="card-title">${phone.phone_name}</h4>
+        <h6>Brand: ${phone.brand}</h6>
+        <p>Slug: ${phone.slug.slice(0, 26)}</p>
             </div>
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buy</button>
             </div>
@@ -60,17 +60,17 @@ const showPhones = (phones, dataLimit) => {
             </div>
             <div class="modal-body">
             <!--Images-->
-            <div class="d-flex justify-content-center mb-5">
+            <div class="d-flex justify-content-center">
                 <img src="${phone.image}" class="w-50">
             </div>
-
+            
             <!--Phone detail-->
             <h4 class="mt-4">Brand: ${phone.brand}</h4>
             <p class="mt-4">Slug: ${phone.slug}</p>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Buy now</button>
+            <button type="button" class="btn btn-primary">Buy Now</button>
         </div>
         </div>
         </div>
