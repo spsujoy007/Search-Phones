@@ -87,11 +87,21 @@ const proccesSearch = (dataLimit) => {
     const searhField = document.getElementById('search-field');
     const searchText = searhField.value;
     getFunction(searchText, dataLimit)
+
+    // searhField.value = '';
 }
 
-document.getElementById('search-btn').addEventListener('click', function () {
-    proccesSearch(10);
 
+
+document.getElementById('search-btn').addEventListener('click', function (searchText) {
+    proccesSearch(10);
+})
+
+//search with on keypress
+document.getElementById('search-field').addEventListener('keypress', function (enter) {
+    if (enter.key === 'Enter') {
+        proccesSearch(10);
+    }
 })
 
 const showOrHide = showOrHide => {

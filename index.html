@@ -26,7 +26,7 @@
 
 
     <header class="mb-4">
-        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg bg-light ">
             <div class="container">
                 <a class="navbar-brand" href="#">Mobile Dukan</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,23 +39,20 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-
                     </ul>
 
-                    <!--/////////// search phones from here /////////// -->
-                    <div class="d-flex" role="search">
-                        <input id="search-field" class="form-control me-2" placeholder="Search" aria-label="Search">
-                        <button id="search-btn" class="btn btn-outline-success" type="submit">Search</button>
-                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="container">
+        <!--/////////// search phones from here /////////// -->
+        <div role="search" class="d-flex">
+            <input id="search-field" class="form-control me-2" placeholder="Search" aria-label="Search">
+            <button id="search-btn" class="btn btn-outline-success d-inline" type="submit">Search</button>
+        </div>
+
         <section id="all-products">
             <!-- phone container //////////// -->
             <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
