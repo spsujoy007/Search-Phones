@@ -8,7 +8,7 @@ const getFunction = (phone, dataLimit) => {
 const showPhones = (phones, dataLimit) => {
 
 
-    // console.log(phones);
+    console.log(phones);
     const phoneField = document.getElementById('phone-container');
     phoneField.innerHTML = '';
     const showAllButton = document.getElementById('showall-btn');
@@ -46,8 +46,35 @@ const showPhones = (phones, dataLimit) => {
             <h6>Brand: ${phone.brand}</h6>
             <p>Slug: ${phone.slug.slice(0, 26)}</p>
             </div>
-            <button class="btn btn-primary">Buy</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buy</button>
             </div>
+            <!-- Button trigger modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">${phone.phone_name}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <!--Images-->
+            <div class="d-flex justify-content-center mb-5">
+                <img src="${phone.image}" class="w-50">
+            </div>
+
+            <!--Phone detail-->
+            <h4 class="mt-4">Brand: ${phone.brand}</h4>
+            <p class="mt-4">Slug: ${phone.slug}</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Buy now</button>
+        </div>
+        </div>
+        </div>
+    </div>
             `
         phoneField.appendChild(newPost)
 
