@@ -122,4 +122,4 @@ document.getElementById('button-showAll').addEventListener('click', function () 
 
 
 
-// getFunction('iphone')
+getFunction('iphone')
